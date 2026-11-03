@@ -1,0 +1,53 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm">
+    <div class="container-fluid">
+        <!-- Logotipo o Nombre de la marca -->
+        <a class="navbar-brand fw-bold text-primary" href="#">
+            <i class="bi bi-bootstrap-fill me-1"></i> MiSitio
+        </a>
+
+        <!-- Botón hamburguesa para dispositivos móviles -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Contenido colapsable de la navbar -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <!-- Enlace activo -->
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" [routerLink]="['/']">Home</a>
+                </li>
+                <!-- Enlace normal -->
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" [routerLink]="['/imagenes']">Subir Imágenes</a>
+                </li>
+                <!-- Menú desplegable (Dropdown) -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Categorías
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Acción 1</a></li>
+                        <li><a class="dropdown-item" href="#">Acción 2</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Algo más aquí</a></li>
+                    </ul>
+                </li>
+                <!-- Enlace deshabilitado -->
+                <li class="nav-item">
+                    <a class="nav-link disabled" aria-disabled="true">Próximamente</a>
+                </li>
+            </ul>
+
+            <!-- Formulario de búsqueda -->
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Search">
+                <button class="btn btn-outline-primary" type="submit">Buscar</button>
+            </form>
+        </div>
+    </div>
+</nav>

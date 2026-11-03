@@ -1,2 +1,8 @@
-<input #miArchivo type="file" accept="image/*">
-<button (click)="subirImagen(miArchivo)">Subir</button>
+<h1>Subir Archivos Api</h1>
+<form #form="ngForm">
+    <input #cajafile name="cajafile" type="file" accept="image/*" class="form-control">
+    <button (click)="uploadFiles()" class="btn btn-info">Subir</button>
+</form>
+
+<img src="{{urlFile}}" style="width: 150px; height: 150px;"/>
+<h2 style="color: blue;">{{mensaje}}</h2>
