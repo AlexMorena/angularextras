@@ -22,6 +22,21 @@
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" [routerLink]="['/imagenes']">Subir Imágenes</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" [routerLink]="['/informespdf']">Informes PDF</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" [routerLink]="['/equipo']">Equipos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" [routerLink]="['/login']">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" [routerLink]="['/subordinados']">Subordinados</a>
+                </li>
+                <li>
+                    <button (click)="cerrarSesion()">Cerrar sesion</button>
+                </li>
                 <!-- Menú desplegable (Dropdown) -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"

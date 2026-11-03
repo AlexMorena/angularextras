@@ -1,0 +1,42 @@
+<div class="container my-5">
+    <h1 class="mb-4 fw-bold text-dark border-bottom pb-2">Equipos</h1>
+
+    <div class="table-responsive shadow-sm rounded-4 overflow-hidden border">
+        <table class="table table-hover align-middle mb-0">
+            <thead class="table-dark text-uppercase fs-6">
+                <tr>
+                    <th class="py-3"># ID</th>
+                    <th class="py-3">Nombre</th>
+                    <th class="py-3">Imagen</th>
+                    <th class="py-3 text-center">Champions</th>
+                    <th class="py-3">Web</th>
+                    <th class="py-3">Descripcion</th>
+                    <th class="py-3 text-center">Finalista</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for(equipo of equipos; track equipo.idEquipo){
+                <tr>
+                    <td class="fw-bold text-secondary">{{equipo.idEquipo}}</td>
+                    <td class="fw-semibold text-dark">{{equipo.nombre}}</td>
+                    <td>
+                        <img src="{{equipo.imagen}}" class="rounded shadow-sm border object-fit-cover"
+                            style="width: 80px; height: 80px;" alt="{{equipo.nombre}}" />
+                    </td>
+                    <td class="text-center">
+                        <span class="badge bg-warning text-dark px-2 py-1 fs-6">{{equipo.champions}}</span>
+                    </td>
+                    <td>
+                        <a href="{{equipo.web}}" target="_blank"
+                            class="text-primary text-decoration-none">{{equipo.web}}</a>
+                    </td>
+                    <td class="text-muted text-wrap" style="max-width: 250px;">{{equipo.descripcion}}</td>
+                    <td class="text-center">
+                        <span class="badge bg-secondary">{{equipo.finalista}}</span>
+                    </td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
